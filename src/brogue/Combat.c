@@ -1003,7 +1003,7 @@ boolean attack(creature *attacker, creature *defender, boolean lungeAttack) {
 	char buf[COLS*2], buf2[COLS*2], attackerName[COLS], defenderName[COLS], verb[DCOLS], explicationClause[DCOLS] = "", armorRunicString[DCOLS*3];
 	boolean sneakAttack, defenderWasAsleep, defenderWasParalyzed, degradesAttackerWeapon, sightUnseen;
     
-    if (attacker == &player) {
+    if (attacker == &player && rogue.weapon) {
         rogue.featRecord[FEAT_PURE_MAGE] = false;
     }
 	

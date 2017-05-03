@@ -2496,7 +2496,7 @@ const bolt boltCatalog[NUMBER_BOLT_KINDS] = {
 #pragma mark Feat definitions
 
 const feat featTable[FEAT_COUNT] = {
-    {"Pure Mage",       "Ascend without using fists or a weapon.", true},
+    {"Pure Mage",       "Ascend without using a weapon.", true},
     {"Pure Warrior",    "Ascend without using a staff, wand or charm.", true},
     {"Pacifist",        "Ascend without attacking a creature.", true},
     {"Archivist",       "Ascend without drinking a potion or reading a scroll.", true},
