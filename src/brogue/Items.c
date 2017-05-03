@@ -256,7 +256,7 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 				theItem->charges++;
 				if (rand_percent(15)) {
 					theItem->charges++;
-                    while (rand_percent(10)) {
+                    while (rand_percent(5)) {
                         theItem->charges++;
                     }
 				}
@@ -285,7 +285,7 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 				theItem->enchant1 *= -1;
 				theItem->flags |= ITEM_CURSED;
 			} else {
-                while (rand_percent(10)) {
+                while (rand_percent(5)) {
                     theItem->enchant1++;
                 }
             }
@@ -297,7 +297,7 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
             theItem->displayChar = CHARM_CHAR;
             theItem->charges = 0; // Charms are initially ready for use.
             theItem->enchant1 = randClump(charmTable[itemKind].range);
-            while (rand_percent(7)) {
+            while (rand_percent(10)) {
                 theItem->enchant1++;
             }
 			theItem->flags |= ITEM_IDENTIFIED;
