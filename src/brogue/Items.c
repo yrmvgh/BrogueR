@@ -7182,17 +7182,15 @@ void equipItem(item *theItem, boolean force) {
 		}
 		if (rogue.ringLeft) {
 			rogue.ringRight = theItem;
+            identifyItemKind(theItem);
 		} else {
 			rogue.ringLeft = theItem;
+            identifyItemKind(theItem);
 		}
 		updateRingBonuses();
 		if (theItem->kind == RING_CLAIRVOYANCE) {
 			updateClairvoyance();
 			displayLevel();
-            identifyItemKind(theItem);
-		} else if (theItem->kind == RING_LIGHT
-                   || theItem->kind == RING_STEALTH) {
-            identifyItemKind(theItem);
 		}
 	}
 	theItem->flags |= ITEM_EQUIPPED;
