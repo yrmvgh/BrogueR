@@ -1094,14 +1094,10 @@ void updateFloorItems() {
             
             pmap[x][y].flags &= ~(HAS_ITEM | ITEM_DETECTED);
             
-            if (theItem->category == POTION || rogue.depthLevel == DEEPEST_LEVEL) {
-                // Potions don't survive the fall.
-                deleteItem(theItem);
-            } else {
-                // Add to next level's chain.
-                theItem->nextItem = levels[rogue.depthLevel-1 + 1].items;
-                levels[rogue.depthLevel-1 + 1].items = theItem;
-            }
+            // Add to next level's chain.
+            theItem->nextItem = levels[rogue.depthLevel-1 + 1].items;
+            levels[rogue.depthLevel-1 + 1].items = theItem;
+
             refreshDungeonCell(x, y);
             continue;
         }
