@@ -1685,25 +1685,25 @@ short charmRechargeDelay(short charmKind, short enchant) {
         800,    // Invisibility
         800,    // Telepathy
         800,    // Levitation
-        2500,   // Shattering
-        700,    // Guardian
-        1000,   // Teleportation
+        1000,   // Shattering
+        800,    // Guardian
+        2500,   // Teleportation
         10000,  // Recharging
         2500,   // Negation
     };
     const short increment[NUMBER_CHARM_KINDS] = {
         45, // Health
-        40, // Protection
+        35, // Protection
         35, // Haste
         40, // Fire immunity
         35, // Invisibility
-        35, // Telepathy
-        35, // Levitation
-        40, // Shattering
-        30, // Guardian
+        40, // Telepathy
+        40, // Levitation
+        45, // Shattering
+        40, // Guardian
         45, // Teleportation
         45, // Recharging
-        40, // Negation
+        45, // Negation
     };
     
     return charmEffectDuration(charmKind, enchant) + duration[charmKind] * (pow((double) (100 - (increment[charmKind])) / 100, enchant) + FLOAT_FUDGE);
