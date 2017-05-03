@@ -31,3 +31,13 @@
 # Debug files
 *.dSYM/
 *.su
+
+# tsadok's ignores
+*~
+*.broguesave
+*.broguerec
+.gitignore
+Brogue seed catalog.txt
+BrogueHighScores.txt
+bin/brogue
+bin/libtcod.so*
