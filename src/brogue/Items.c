@@ -1820,7 +1820,7 @@ void itemDetails(char *buf, item *theItem) {
 	} else {
 		switch (theItem->category) {
 			case POTION:
-				sprintf(buf2, "%s flask%s contain%s a swirling %s liquid. Who knows what %s will do when drunk or thrown?",
+				sprintf(buf2, "%s durable steel flask%s contain%s a pungent %s liquid. Who knows what %s will do when drunk or thrown?",
 						(singular ? "This" : "These"),
 						(singular ? "" : "s"),
 						(singular ? "s" : ""),
@@ -1828,7 +1828,7 @@ void itemDetails(char *buf, item *theItem) {
 						(singular ? "it" : "they"));
 				break;
 			case SCROLL:
-				sprintf(buf2, "%s parchment%s %s covered with indecipherable writing, and bear%s a title of \"%s.\" Who knows what %s will do when read aloud?",
+				sprintf(buf2, "%s stone tablet%s %s covered with indecipherable runes, and bear%s a title of \"%s.\" Who knows what %s will do when read aloud?",
 						(singular ? "This" : "These"),
 						(singular ? "" : "s"),
 						(singular ? "is" : "are"),
