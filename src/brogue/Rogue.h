@@ -1207,9 +1207,9 @@ boolean cellHasTerrainFlag(short x, short y, unsigned long flagMask);
 #define staffBlinkDistance(enchant)			((int) ((enchant) * 2 + 2 + FLOAT_FUDGE))
 #define staffHasteDuration(enchant)			((int) (2 + (enchant) * 4 + FLOAT_FUDGE))
 #define staffBladeCount(enchant)			((int) ((enchant) * 3 / 2 + FLOAT_FUDGE))
-#define staffDiscordDuration(enchant)		((int) ((enchant) * 4 + FLOAT_FUDGE))
-#define staffProtection(enchant)			((int) (50 * pow(1.53, (double) (enchant) - 2) + FLOAT_FUDGE))
-#define staffEntrancementDuration(enchant)	((int) ((enchant) * 3 + FLOAT_FUDGE))
+#define staffDiscordDuration(enchant)		((int) ((enchant) * 4 + 1 + FLOAT_FUDGE))
+#define staffProtection(enchant)			((int) (50 * pow(1.53, (double) (enchant) - 2) + 20 + FLOAT_FUDGE))
+#define staffEntrancementDuration(enchant)	((int) ((enchant) * 3 + 1 + FLOAT_FUDGE))
 
 #define ringWisdomMultiplier(enchant)       (int) (10 * pow(1.3, min(27, (enchant))) + FLOAT_FUDGE)
 
