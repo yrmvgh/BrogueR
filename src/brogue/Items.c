@@ -237,7 +237,6 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 			}
 			theEntry = &scrollTable[itemKind];
 			theItem->displayChar = SCROLL_CHAR;
-			theItem->flags |= ITEM_FLAMMABLE;
 			break;
 		case POTION:
 			if (itemKind < 0) {
