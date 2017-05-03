@@ -2446,8 +2446,8 @@ void itemDetails(char *buf, item *theItem) {
                         case RING_CLAIRVOYANCE:
                             if (theItem->enchant1 > 0) {
                                 sprintf(buf2, "\n\nThis ring provides magical sight with a radius of %i. (If the ring is enchanted, this will increase to %i.)",
-                                        theItem->enchant1 + 1,
-                                        theItem->enchant1 + 2);
+                                        theItem->enchant1 + 2,
+                                        theItem->enchant1 + 3);
                             } else {
                                 sprintf(buf2, "\n\nThis ring magically blinds you to a radius of %i. (If the ring is enchanted, this will decrease to %i.)",
                                         (theItem->enchant1 * -1) + 1,
@@ -7247,7 +7247,7 @@ void updateRingBonuses() {
 		if (rings[i]) {
 			switch (rings[i]->kind) {
 				case RING_CLAIRVOYANCE:
-					rogue.clairvoyance += effectiveRingEnchant(rings[i]);
+					rogue.clairvoyance += 1 + effectiveRingEnchant(rings[i]);
 					break;
 				case RING_STEALTH:
 					rogue.stealthBonus += effectiveRingEnchant(rings[i]);
@@ -7259,7 +7259,7 @@ void updateRingBonuses() {
 					rogue.transference += effectiveRingEnchant(rings[i]);
 					break;
 				case RING_LIGHT:
-					rogue.lightMultiplier += effectiveRingEnchant(rings[i]);
+					rogue.lightMultiplier += 2 * effectiveRingEnchant(rings[i]);
 					break;
 				case RING_AWARENESS:
 					rogue.awarenessBonus += 20 * effectiveRingEnchant(rings[i]);
