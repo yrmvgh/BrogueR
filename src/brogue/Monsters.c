@@ -1589,8 +1589,8 @@ boolean awareOfTarget(creature *observer, creature *target) {
         // within range but currently unaware
         retval = rand_percent(25);
         if (retval && !(observer->creatureState & (MONSTER_ALLY | MONSTER_FLEEING))) {
-+           colorFlash(&redFlashColor, 0, 0, 5, 4, observer->xLoc, observer->yLoc);
-+        }
+            colorFlash(&torchLightColor, 0, 0, 6, 2, observer->xLoc, observer->yLoc);
+        }
     } else {
         retval = false;
     }
