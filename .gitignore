@@ -39,5 +39,6 @@
 Brogue seed catalog.txt
 BrogueHighScores.txt
 bin/brogue
+bin/broguer
 bin/libtcod.so*
 brogue

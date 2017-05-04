@@ -3,8 +3,8 @@ SDL_FLAGS = `sdl-config --cflags` `sdl-config --libs`
 LIBTCODDIR=src/libtcod-1.5.2
 CFLAGS=-Isrc/brogue -Isrc/platform -Wall -Wno-parentheses ${DEFINES}
 CFLAGS+=-I/usr/include/libtcod-1.5.1
-RELEASENAME=BrogueR
-LASTTARGET := $(shell ./broguer --target)
+RELEASENAME=brogue-1.7.4
+LASTTARGET := $(shell ./brogue --target)
 CC ?= gcc
 
 ifeq (${LASTTARGET},both)
@@ -82,10 +82,10 @@ endif
 .PHONY : clean both curses tcod tar
 
 bin/brogue : ${DEPENDENCIES} ${BROGUEFILES}
-	$(CC) -O2 -march=i586 -o bin/brogue ${BROGUEFILES} ${LIBRARIES} -Wl,-rpath,.
+	$(CC) -O2 -march=i586 -o bin/broguer ${BROGUEFILES} ${LIBRARIES} -Wl,-rpath,.
 
 clean : 
-	rm -f src/brogue/*.o src/platform/*.o bin/brogue
+	rm -f src/brogue/*.o src/platform/*.o bin/broguer
 
 ${LIBTCODDIR} :
 	src/get-libtcod.sh
@@ -99,7 +99,7 @@ tar : both
 	$(wildcard *.rtf) \
 	readme \
 	$(wildcard *.txt) \
-	bin/brogue \
+	bin/broguer \
 	bin/keymap \
 	bin/icon.bmp \
 	bin/brogue-icon.png \
