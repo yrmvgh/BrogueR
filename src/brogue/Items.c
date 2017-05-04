@@ -843,7 +843,7 @@ item *addItemToPack(item *theItem) {
 	char itemLetter;
 	
 	// Can the item stack with another in the inventory?
-	if (theItem->category & (FOOD|POTION|SCROLL|GEM)) {
+	if ((theItem->category & (FOOD|POTION|SCROLL|GEM)) || (theItem->quantity > 1 && (theItem->category & WEAPON))) {
 		for (tempItem = packItems->nextItem; tempItem != NULL; tempItem = tempItem->nextItem) {
 			if (theItem->category == tempItem->category && theItem->kind == tempItem->kind) {
 				// We found a match!
