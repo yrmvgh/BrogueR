@@ -161,7 +161,7 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 			}
 			
 			if (rand_percent(40)) {
-				theItem->enchant1 += rand_range(1, 3);
+				theItem->enchant1 += rand_range(1, 2);
 				if (rand_percent(50)) {
 					// cursed
 					theItem->enchant1 *= -1;
@@ -181,9 +181,7 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 						theItem->vorpalEnemy = chooseVorpalEnemy();
 					}
 				} else {
-                    while (rand_percent(10)) {
-                        theItem->enchant1++;
-                    }
+                    theItem->enchant1++;
                 }
 			}
 			if (itemKind == DART || itemKind == INCENDIARY_DART || itemKind == JAVELIN) {
@@ -209,7 +207,7 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 			theItem->displayChar = ARMOR_CHAR;
 			theItem->charges = ARMOR_DELAY_TO_AUTO_ID; // this many turns until it reveals its enchants and whether runic
 			if (rand_percent(40)) {
-				theItem->enchant1 += rand_range(1, 3);
+				theItem->enchant1 += rand_range(1, 2);
 				if (rand_percent(50)) {
 					// cursed
 					theItem->enchant1 *= -1;
@@ -225,9 +223,7 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 						theItem->vorpalEnemy = chooseVorpalEnemy();
 					}
 				} else {
-                    while (rand_percent(10)) {
-                        theItem->enchant1++;
-                    }
+                    theItem->enchant1++;
                 }
 			}
 			break;
