@@ -3,8 +3,8 @@ SDL_FLAGS = `sdl-config --cflags` `sdl-config --libs`
 LIBTCODDIR=src/libtcod-1.5.2
 CFLAGS=-Isrc/brogue -Isrc/platform -Wall -Wno-parentheses ${DEFINES}
 CFLAGS+=-I/usr/include/libtcod-1.5.1
-RELEASENAME=brogue-1.7.4
-LASTTARGET := $(shell ./brogue --target)
+RELEASENAME=BrogueR
+LASTTARGET := $(shell ./broguer --target)
 CC ?= gcc
 
 ifeq (${LASTTARGET},both)
