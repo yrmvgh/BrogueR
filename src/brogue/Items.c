@@ -250,7 +250,6 @@ item *makeItemInto(item *theItem, unsigned long itemCategory, short itemKind) {
 			theItem->charges = 3;
             while (rand_percent(5)) {
                 theItem->charges++;
-
 			}
 			theItem->enchant1 = theItem->charges;
 			theItem->enchant2 = (itemKind == STAFF_BLINKING || itemKind == STAFF_OBSTRUCTION ? 1000 : 500); // start with no recharging mojo
