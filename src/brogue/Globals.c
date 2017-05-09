@@ -2411,7 +2411,7 @@ itemTable wandTable[NUMBER_WAND_KINDS] = {
 	{"beckoning",		itemMetals[5], "",	3,	500,	BOLT_BECKONING,     {3,5,1}, false, false, "The force of this wand will yank the targeted creature into direct proximity."},
 	{"plenty",			itemMetals[6], "",	2,	700,	BOLT_PLENTY,        {1,2,1}, false, false, "The creature at the other end of this mischievous bit of metal will be beside itself -- literally! Cloning an enemy is ill-advised, but the effect can be invaluable on a powerful ally."},
 	{"invisibility",	itemMetals[7], "",	3,	100,	BOLT_INVISIBILITY,  {3,5,1}, false, false, "A charge from this wand will render a creature temporarily invisible to the naked eye. Only with telepathy or in the silhouette of a thick gas will an observer discern the creature's hazy outline."},
-    {"empowerment",     itemMetals[8], "",	2,	100,	BOLT_EMPOWERMENT,   {0,1,1}, false, false, "This sacred magic will permanently improve the mind and body of any monster it hits. A wise adventurer will use it on allies, making them stronger in combat and able to learn a new talent from a fallen foe. If the bolt is reflected back at you, it will have no effect."},
+    {"empowerment",     itemMetals[8], "",	2,	100,	BOLT_EMPOWERMENT,   {1,1,1}, false, false, "This sacred magic will permanently improve the mind and body of any monster it hits. A wise adventurer will use it on allies, making them stronger in combat and able to learn a new talent from a fallen foe. If the bolt is reflected back at you, it will have no effect."},
 };
 
 itemTable staffTable[NUMBER_STAFF_KINDS] = {
